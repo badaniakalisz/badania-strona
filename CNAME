@@ -1,1 +1,4 @@
-badaniakalisz.pl
+User-agent: *
+Allow: /
+
+Sitemap: https://badaniakalisz.pl/sitemap.xml
