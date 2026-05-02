@@ -7,8 +7,6 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
-	<link rel="preload" href="assets/css/theme.min.css" as="style">
-	<link rel="preload" href="assets/js/theme.min.js" as="script">
 	<link rel="manifest" href="assets/ico/manifest.json">
 	<link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
 	<link rel="shortcut icon" href="assets/ico/favicon.ico">
@@ -20,12 +18,16 @@
 	<meta name="description"
 		content="Psycholog Kalisz – badania psychologiczne kierowców, na broń i pracowników. Sebastian Brajer. Szybkie terminy, profesjonalna pomoc.">
 	<!-- CSS Plugins -->
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
 		integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 	<!-- CSS Global -->
-	<link rel="stylesheet" href="assets/css/theme.min.css">
+	<link rel="stylesheet" href="assets/bootstrap/theme.min.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<link rel="preload" href="assets/img/psycholog.webp" as="image" fetchpriority="high">
 
 	<script type="application/ld+json">
 	{
@@ -49,8 +51,7 @@
 
 <body>
 
-	<!-- NAVBAR
-	================================================== -->
+	<!-- NAVBAR -->
 	<nav class="navbar navbar-light navbar-expand-lg fixed-top">
 		<div class="container">
 
@@ -87,7 +88,7 @@
 							<a class="dropdown-item" href="badania-psychologiczne-na-bron.html">Badania psychologiczne
 								na broń</a>
 							<a class="dropdown-item" href="badania-psychologiczne-pracownikow.html">Badania
-								pscyhologiczne pracowników</a>
+								psychologiczne pracowników</a>
 							<a class="dropdown-item" href="terapia-oraz-porady-psychologiczne.html">Terapia oraz porady
 								psychologiczne</a>
 							<a class="dropdown-item"
@@ -105,16 +106,25 @@
 						<a class="nav-link" href="kontakt.html">Kontakt</a>
 					</li>
 				</ul>
-
-
 			</div> <!-- / .navbar-collapse -->
-
 		</div> <!-- / .container -->
 	</nav> <!-- / .navbar -->
 
 	<!-- WELCOME
 	================================================== -->
-	<section class="section section_welcome" data-parallax="scroll" data-image-src="assets/img/psycholog.webp">
+
+	<style>
+		.section_welcome {
+    background-attachment: fixed; /* To zastępuje efekt parallax */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* min-height: 100vh; Albo taka wysokość, jaką miałeś wcześniej */
+    /* display: flex; */
+    /* align-items: center; */
+}
+	</style>
+	<section class="section section_welcome" style="background-image: url('assets/img/psycholog.webp');">
 
 		<!-- Content -->
 		<div class="section_welcome__main">
@@ -127,7 +137,7 @@
 							Psycholog
 						</h1>
 						<p class="section__subheading section_welcome__subheading text-center text-muted">
-							Psychoterapia i doradztwo indywidualne dla rodzin, małżeństw i par
+							Badania psychologiczne kierowców, badania psychologiczne na broń, diagnoza psychologiczna (intelekt, funkcje poznawcze, osobowość).
 						</p>
 
 						<!-- Button -->
@@ -334,8 +344,7 @@
 	</section>
 
 
-	<!-- FOOTER
-	================================================== -->
+	<!-- FOOTER -->
 	<footer class="section section_footer">
 		<div class="container">
 			<div class="row">
@@ -371,7 +380,10 @@
 							<i class="fas fa-map-marker-alt"></i> 63-300 Pleszew, ul. Słowackiego 14 (SPOMASZ)
 						</li>
 						<li>
-							<i class="fas fa-phone"></i> 500 047 105 / 508 281 007
+							<i class="fas fa-phone"></i><a href="tel:500047105"> 500 047 105</a>
+						</li>
+						<li>
+							<i class="fas fa-phone"></i><a href="tel:508281007"> 508 281 007</a>
 						</li>
 					</ul>
 
@@ -391,19 +403,18 @@
 		</div> <!-- / .container -->
 	</footer>
 
-	<!-- JAVASCRIPT
-	================================================== -->
+	<!-- JAVASCRIPT -->
 
 	<!-- JS Global -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+	<script src="assets/bootstrap/bootstrap.bundle.min.js" defer></script>
 
 	<!-- JS Plugins -->
-	<script src="assets/plugins/parallax/parallax.min.js"></script>
+	<script src="assets/plugins/parallax/parallax.min.js" defer></script>
 
 	<!-- JS Custom -->
-	<script src="assets/js/theme.min.js"></script>
-	<script src="/assets/js/custom.js"></script>
+	<script src="assets/js/theme.min.js" defer></script>
+
 
 </body>
 
