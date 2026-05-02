@@ -10,11 +10,16 @@
 	<link rel="preload" href="assets/img/badania-psychologiczne-psychotechniczne-kierowcow.webp" as="image" fetchpriority="high">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="assets/bootstrap/theme.min.css">
-
+	<link rel="stylesheet" href="assets/bootstrap/theme.min.css" media="print" onload="this.media='all'">
 	<link
 		href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i&display=swap"
-		rel="stylesheet">
+		rel="stylesheet" media="print" onload="this.media='all'">
+
+	<noscript>
+		<link rel="stylesheet" href="assets/bootstrap/theme.min.css">
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i&display=swap">
+	</noscript>
 
 	<title>Badania psychologiczne i psychotechniczne kierowców Kalisz Kępno</title>
 

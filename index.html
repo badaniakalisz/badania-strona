@@ -10,11 +10,16 @@
 	<link rel="preload" href="assets/img/psycholog.webp" as="image" fetchpriority="high">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="assets/bootstrap/theme.min.css">
-
+	<link rel="stylesheet" href="assets/bootstrap/theme.min.css" media="print" onload="this.media='all'">
 	<link
 		href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i&display=swap"
-		rel="stylesheet">
+		rel="stylesheet" media="print" onload="this.media='all'">
+
+	<noscript>
+		<link rel="stylesheet" href="assets/bootstrap/theme.min.css">
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i&display=swap">
+	</noscript>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
@@ -231,7 +236,8 @@
 							<div class="col-3 align-self-center">
 								<div class="section_menu__item__img">
 									<img src="assets/img/thumbs/badania-psychologiczne-psychotechniczne-kierowcow-100.webp"
-										srcset="assets/img/thumbs/badania-psychologiczne-psychotechniczne-kierowcow-200.webp 2x"
+										srcset="assets/img/thumbs/badania-psychologiczne-psychotechniczne-kierowcow-100.webp 100w, 
+             assets/img/thumbs/badania-psychologiczne-psychotechniczne-kierowcow-200.webp 200w" sizes="auto"
 										width="100" height="100"
 										alt="Badania psychologiczne i psychotechniczne kierowców" loading="lazy">
 								</div>
@@ -252,8 +258,9 @@
 							<div class="col-3 align-self-center">
 								<div class="section_menu__item__img">
 									<img src="assets/img/thumbs/badania-psychologiczne-operatorow-maszyn-100.webp"
-										srcset="assets/img/thumbs/badania-psychologiczne-operatorow-maszyn-200.webp 2x"
-										width="100" height="100" alt="Badania psychologiczne operatorów maszyn w ruchu"
+										srcset="assets/img/thumbs/badania-psychologiczne-operatorow-maszyn-100.webp 100w, 
+             assets/img/thumbs/badania-psychologiczne-operatorow-maszyn-200.webp 200w" sizes="auto" width="100"
+										height="100" alt="Badania psychologiczne operatorów maszyn w ruchu"
 										loading="lazy">
 								</div>
 							</div>
@@ -273,9 +280,9 @@
 						<div class="row">
 							<div class="col-3 align-self-center">
 								<div class="section_menu__item__img">
-									<img src="assets/img/thumbs/Badania-psychologiczne-na-bron-100.webp"
-										srcset="assets/img/thumbs/Badania-psychologiczne-na-bron-200.webp 2x"
-										width="100" height="100" alt="Badania psychologiczne na broń" loading="lazy">
+									<img src="assets/img/thumbs/Badania-psychologiczne-na-bron-100.webp" srcset="assets/img/thumbs/Badania-psychologiczne-na-bron-100.webp 100w, 
+             assets/img/thumbs/Badania-psychologiczne-na-bron-200.webp 200w" sizes="auto" width="100" height="100"
+										alt="Badania psychologiczne na broń" loading="lazy">
 								</div>
 							</div>
 							<div class="col-9">
@@ -293,10 +300,9 @@
 						<div class="row">
 							<div class="col-3 align-self-center">
 								<div class="section_menu__item__img">
-									<img src="assets/img/thumbs/badania-psychologiczne-pracownikow-100.webp"
-										srcset="assets/img/thumbs/badania-psychologiczne-pracownikow-200.webp 2x"
-										width="100" height="100" alt="Badania psychologiczne pracowników"
-										loading="lazy">
+									<img src="assets/img/thumbs/badania-psychologiczne-pracownikow-100.webp" srcset="assets/img/thumbs/badania-psychologiczne-pracownikow-100.webp 100w, 
+             assets/img/thumbs/badania-psychologiczne-pracownikow-200.webp 200w" sizes="auto" width="100" height="100"
+										alt="Badania psychologiczne pracowników" loading="lazy">
 								</div>
 							</div>
 							<div class="col-9">
@@ -314,9 +320,9 @@
 						<div class="row">
 							<div class="col-3 align-self-center">
 								<div class="section_menu__item__img">
-									<img src="assets/img/thumbs/terapia-porady-psychologiczne-100.webp"
-										srcset="assets/img/thumbs/terapia-porady-psychologiczne-200.webp 2x" width="100"
-										height="100" alt="Terapia oraz porady psychologiczne" loading="lazy">
+									<img src="assets/img/thumbs/terapia-porady-psychologiczne-100.webp" srcset="assets/img/thumbs/terapia-porady-psychologiczne-100.webp 100w, 
+             assets/img/thumbs/terapia-porady-psychologiczne-200.webp 200w" sizes="auto" width="100" height="100"
+										alt="Terapia oraz porady psychologiczne" loading="lazy">
 								</div>
 							</div>
 							<div class="col-9">
@@ -335,8 +341,9 @@
 							<div class="col-3 align-self-center">
 								<div class="section_menu__item__img">
 									<img src="assets/img/thumbs/diagnoza-psychologiczna-neuropsychologiczna-100.webp"
-										srcset="assets/img/thumbs/diagnoza-psychologiczna-neuropsychologiczna-200.webp 2x"
-										width="100" height="100" alt="Diagnoza psychologiczna oraz neuropsychologiczna"
+										srcset="assets/img/thumbs/diagnoza-psychologiczna-neuropsychologiczna-100.webp 100w, 
+             assets/img/thumbs/diagnoza-psychologiczna-neuropsychologiczna-200.webp 200w" sizes="auto" width="100"
+										height="100" alt="Diagnoza psychologiczna oraz neuropsychologiczna"
 										loading="lazy">
 								</div>
 							</div>
@@ -356,8 +363,8 @@
 						<div class="row">
 							<div class="col-3 align-self-center">
 								<div class="section_menu__item__img">
-									<img src="assets/img/thumbs/straznik-miejski-100.webp"
-										srcset="assets/img/thumbs/straznik-miejski-200.webp 2x" width="100" height="100"
+									<img src="assets/img/thumbs/straznik-miejski-100.webp" srcset="assets/img/thumbs/straznik-miejski-100.webp 100w, 
+             assets/img/thumbs/straznik-miejski-200.webp 200w" sizes="auto" width="100" height="100"
 										alt="Badania psychologiczne strażników gminnych i miejskich" loading="lazy">
 								</div>
 							</div>
