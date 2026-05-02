@@ -1,0 +1,6 @@
+npx purgecss --css assets/bootstrap/full-theme.css \
+             --content index.html *.html \
+             --safelist navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark sticky-top fixed-top ml-auto mr-auto show collapse collapsing dropdown-menu navbar-collapse \
+             --output assets/bootstrap/theme.purged.css
+             
+npx clean-css-cli -o assets/bootstrap/theme.min.css assets/bootstrap/theme.purged.css -O2

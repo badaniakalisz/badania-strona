@@ -392,19 +392,34 @@ h5 {
 }
 
 
-.btn-primary:not(:disabled):not(.disabled):active {
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
     color: #212529;
     background-color: #ed8f0c;
     border-color: #e1880b
 }
 
 
-.btn-primary:not(:disabled):not(.disabled):active:focus {
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
     box-shadow: 0 0 0 .2rem rgba(213, 147, 53, .5)
 }
 
 .collapse:not(.show) {
     display: none
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .collapsing {
+        transition: none
+    }
 }
 
 .dropdown {
@@ -482,6 +497,10 @@ h5 {
     color: #6c757d;
     pointer-events: none;
     background-color: transparent
+}
+
+.dropdown-menu.show {
+    display: block
 }
 
 .nav {
@@ -640,6 +659,12 @@ h5 {
     color: #f5a637
 }
 
+
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #f5a637
+}
+
 .navbar-light .navbar-toggler {
     color: #fff;
     border-color: transparent
@@ -647,6 +672,39 @@ h5 {
 
 .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+.navbar-dark .navbar-brand {
+    color: #f5a637
+}
+
+.navbar-dark .navbar-brand:focus,
+.navbar-dark .navbar-brand:hover {
+    color: #f5a637
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #151515
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f5a637
+}
+
+
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: #f5a637
+}
+
+.navbar-dark .navbar-toggler {
+    color: #151515;
+    border-color: transparent
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23151515' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 
 @-webkit-keyframes progress-bar-stripes {
@@ -706,6 +764,28 @@ h5 {
     }
 }
 
+.bg-light {
+    background-color: #f8f9fa !important
+}
+
+a.bg-light:focus,
+a.bg-light:hover,
+button.bg-light:focus,
+button.bg-light:hover {
+    background-color: #dae0e5 !important
+}
+
+.bg-dark {
+    background-color: #343a40 !important
+}
+
+a.bg-dark:focus,
+a.bg-dark:hover,
+button.bg-dark:focus,
+button.bg-dark:hover {
+    background-color: #1d2124 !important
+}
+
 .d-none {
     display: none !important
 }
@@ -736,8 +816,21 @@ h5 {
     z-index: 1030
 }
 
+@supports ((position:-webkit-sticky) or (position:sticky)) {
+    .sticky-top {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020
+    }
+}
+
 .mr-auto {
     margin-right: auto !important
+}
+
+.ml-auto {
+    margin-left: auto !important
 }
 
 .text-center {
@@ -1051,6 +1144,18 @@ h5 {
 .navbar-light .navbar-brand:focus,
 .navbar-light .navbar-brand:hover {
     color: #fff
+}
+
+.navbar-dark {
+    background-color: transparent
+}
+
+.navbar-dark:before {
+    transform: translateY(0)
+}
+
+.navbar-dark .navbar-brand {
+    color: #151515
 }
 
 html {
